@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Gluten:wght@300&family=Grandstander:wght@300&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Jogo da Forca</title>
+  
+</head>
+
+<body>
+  <header>
+    <div id="logo-alura">
+      <img src="alura-logo-white.svg" alt="Logo Alura">
+    </div>
+    <div id="titulo">
+      Jogo  da 
+    </div>
+  </header>
+
+  <main>
+
+    <div id="modal-retorno">
+      <button id="btn-retorno">Voltar ao Inicio</button>
+    </div>
+
+    <div id="div-init">
+      <button id="btn-init" onclick="iniciarJogo('inicio')">Iniciar Jogo</button>
+    </div>
+
+    <div id="div-content">
+      <div class="canvas">
+        <canvas id="demo" width=600 height=350></canvas>
+      </div>
+
+      <div class="hangman">
+        <img id="img-hangman" src="transparent.png" alt="Imagem Enforcado">
+      </div>
+
+      <div id="display">
+        <div id="div-assunto"></div>
+        <div id="div-slot"></div>
+      </div>
+
+      <div id="cad-palavras">
+        <p>Cadastro Palavras</p>
+        <br>
+        <input id="assunto" type="text" placeholder="Assunto..." style="text-transform:uppercase">
+        <input id="palavra" type="text" placeholder="Palavra..." style="text-transform:uppercase">
+        <br>
+        <br>
+        <input id="cad-input-btn" type="button" value="Incluir">
+      </div>
+
+      <div id="recycle-bin">
+        <div id="recycle-letra"></div>
+      </div>
+
+      <div class="virtual-keyboard">
+        <input class="vbtn" id="btnA" type="button" value="A">
+        <input class="vbtn" id="btnB" type="button" value="B">
+        <input class="vbtn" id="btnC" type="button" value="C">
+        <input class="vbtn" id="btnD" type="button" value="D">
+        <input class="vbtn" id="btnE" type="button" value="E">
+        <input class="vbtn" id="btnF" type="button" value="F">
+        <input class="vbtn" id="btnG" type="button" value="G">
+        <input class="vbtn" id="btnH" type="button" value="H">
+        <input class="vbtn" id="btnI" type="button" value="I">
+        <input class="vbtn" id="btnJ" type="button" value="J">
+        <input class="vbtn" id="btnK" type="button" value="K">
+        <input class="vbtn" id="btnL" type="button" value="L">
+        <input class="vbtn" id="btnM" type="button" value="M">
+        <br>
+        <input class="vbtn" id="btnN" type="button" value="N">
+        <input class="vbtn" id="btnO" type="button" value="O">
+        <input class="vbtn" id="btnP" type="button" value="P">
+        <input class="vbtn" id="btnQ" type="button" value="Q">
+        <input class="vbtn" id="btnR" type="button" value="R">
+        <input class="vbtn" id="btnS" type="button" value="S">
+        <input class="vbtn" id="btnT" type="button" value="T">
+        <input class="vbtn" id="btnU" type="button" value="U">
+        <input class="vbtn" id="btnV" type="button" value="V">
+        <input class="vbtn" id="btnW" type="button" value="W">
+        <input class="vbtn" id="btnX" type="button" value="X">
+        <input class="vbtn" id="btnY" type="button" value="Y">
+        <input class="vbtn" id="btnZ" type="button" value="Z">
+      </div>
+
+    </div>
+
+    <audio id="win">
+      <source src="success1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>  
+
+    <audio id="lose">
+      <source src="fail1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+  </main>
+
+  <footer id="rodape">
+    <!-- https://www.w3schools.com/html/html_symbols.asp  -->
+    <!-- HTML symbol entities &#174 for copyright -->
+    <p>
+        Desenvolvido por 
+        <span style="color:rgb(59, 59, 160)">
+            <b>ACME WebMedia</b>
+            <!-- &#174  Unicode for registered icon -->
+            &#169 <!-- Unicode for copyright icon -->
+            <a href="https://www.linkedin.com/in/chia-fo-hu-2a3366b0/" class="fa fa-linkedin"></a>
+            <a href="https://github.com/hucf/" class="fa fa-github"></a>
+        </span>
+    </p>
+  </footer>
+
+  <script src="script.js" defer></script>
+
+</body>
+
+</html>

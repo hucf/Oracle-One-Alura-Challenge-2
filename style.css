@@ -1,0 +1,323 @@
+/*
+      font-family: 'Concert One', cursive;
+      font-family: 'Gluten', cursive;
+      font-family: 'Grandstander', cursive;
+      font-family: 'Roboto Mono', monospace;
+      font-family: 'Schoolbell', cursive;
+      */
+      header {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 100px 1000px;
+        grid-template-rows: 70px;
+        background-color: rgb(0, 27, 146);
+        /*
+        border-width: 2px;
+        border-style: dashed;
+        border-color: rgb(255, 0, 0);
+        */
+      }
+  
+      #logo-alura {
+        grid-row: 1;
+        grid-column: 1;
+        width: 300px;
+        padding-left: 30px;
+        padding-top: 15px;
+      }
+  
+      #titulo {
+        grid-row: 1;
+        grid-column: 2;
+        color:rgb(255, 255, 255);
+        font-family: 'Grandstander', cursive;
+        font-size: 32px;
+        padding-top: 25px;
+        margin-left: 300px;
+        padding-left: 120px;
+        background-image: url("forca_2.png");
+        background-position:center;
+        background-repeat: no-repeat;
+      }
+  
+      main {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 120px 800px 420px ;
+        grid-template-rows: 340px 90px 113px;
+        /**/
+        text-align: center;
+        color: #444;
+        background-image: url("folha1.webp");
+        background-size:cover;
+        background-repeat: no-repeat;
+        /*
+        border: 2px;
+        border-style: dashed;
+        border-color: blue;
+        */
+      }
+  
+      #div-init {
+        grid-row: 1;
+        grid-column: 2;
+        text-align: center;
+        opacity: 1;
+      }
+  
+      #btn-init {
+        width: 30%;
+        height: 60px;
+        margin-left: 350px;
+        margin-top: 200px;
+        color: white;
+        font-size: 18px;
+        background-color: rgb(88, 121, 230);
+        box-shadow: 10px 10px 10px rgb(92, 92, 92, 0.5);
+        cursor:pointer;
+        border: 2px solid rgb(70, 70, 70, 0.7);
+        border-radius: 10px;
+        opacity: 1;
+      }
+  
+      #btn-init:hover {
+          color: rgb(255, 195, 116);
+          background-color:rgb(138, 171, 214);
+          transform: scale(0.9, 0.9);
+          box-shadow: 10px 10px 10px rgb(92, 92, 92, 0.9);
+      }
+  
+      #modal-retorno {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 450px;
+        top: 250px;
+        width: 150px; 
+        height: 50px; 
+        /*overflow: auto;*/
+        background-color: rgb(255, 255, 255); /* Fallback color */
+        /*border-color: rgb(163, 0, 0);
+        border-width: 2px;
+        border-style: dashed;
+        border-radius: 10px;*/
+      }
+  
+      #btn-retorno {
+        width: 150px;
+        height: 50px;
+        margin-left: 0px;
+        margin-top: 0px;
+        color: white;
+        font-size: 16px;
+        background-color: rgb(88, 121, 230);
+        box-shadow: 10px 10px 10px rgb(92, 92, 92, 0.5);
+        cursor:pointer;
+        border: 2px solid rgb(70, 70, 70, 0.7);
+        border-radius: 10px;
+      }
+  
+      #btn-retorno:hover {
+          color: rgb(255, 195, 116);
+          background-color:rgb(138, 171, 214);
+          transform: scale(0.9, 0.9);
+          box-shadow: 10px 10px 10px rgb(92, 92, 92, 0.9);
+      }
+      
+      #div-content {
+        display: none;
+      }
+  
+      .canvas {
+        grid-row: 1;
+        grid-column: 2;
+        height: 340px;
+        padding-top: 15px;
+        background-image: url("gallows2.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        /*
+        border: 2px;
+        border-style: dashed;
+        border-color: rgb(255, 2, 200);
+        */
+      }
+  
+      .hangman {
+        grid-row: 1;
+        grid-column: 2;
+      }
+  
+      #img-hangman {
+        margin-top: 5px;
+        margin-right: 75px;
+      }
+        
+      #display {
+        grid-row: 2;
+        grid-column: 2;
+      }
+  
+      #div-assunto {
+        height: 35px;
+        padding-top: 10px;
+        color: rgb(226, 90, 0);
+        font-family: 'Concert one', cursive;
+        font-size: 24px;
+        text-align: center;
+        /*border: 2px solid rgb(20, 109, 2);*/
+      }
+  
+      #div-slot {
+        height: 40px;
+        padding-top: 5px;
+        color: rgb(0, 80, 199);
+        /*font-family: 'Concert one', cursive;*/
+        font-family: 'Schoolbell', cursive;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        /*border: 2px solid rgb(83, 83, 83);*/
+      }
+  
+      #cad-palavras {
+        grid-row: 1;
+        grid-column: 3;
+        padding-top: 10px;
+        color:black;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 24px;
+        /*
+        border: 2px;
+        border-style: dashed;
+        border-color: rgb(0, 0, 0);
+        */
+      }
+  
+      #assunto, #palavra {
+        font-size: 20px;
+      }
+  
+      #assunto::placeholder, #palavra::placeholder {
+        color:rgb(177, 177, 177);
+        font-size: 20px;
+      }
+  
+      #cad-input-btn {
+        width: 30%;
+        height: 50px;
+        color: white;
+        font-size: 18px;
+        background-color: rgb(88, 121, 230);
+        cursor:pointer;
+        border: 2px solid rgb(70, 70, 70, 0.7);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px rgb(92, 92, 92, 0.5);
+      }
+  
+      #cad-input-btn:hover {
+        color: rgb(255, 195, 116);
+        background-color:rgb(138, 171, 214);
+        transform: scale(0.9, 0.9);
+        box-shadow: 10px 10px 10px rgb(92, 92, 92, 0.9);
+      }
+  
+      #recycle-bin {
+        grid-row: 2 / 4;
+        grid-column: 3;
+        background-image: url("bin_3.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        /*
+        border: 2px;
+        border-style: dashed;
+        border-color: blue;
+        */
+      }
+  
+      #recycle-letra {
+        height: 100px;
+        padding-top: 20px;
+        padding-left: 70px;
+        padding-right: 70px;
+        text-align: left;
+        word-break: break-all;
+        font-family: 'Concert one', cursive;
+        font-size: 24px;
+        color: rgb(218, 0, 0);
+        /*
+        border: 1px;
+        border-style: dashed;
+        border-color: rgb(255, 0, 0);
+        */
+      }
+  
+      .virtual-keyboard {
+        grid-row: 3;
+        grid-column: 2;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+  
+      .virtual-keyboard input[type="button"] {
+        width: 45px;
+        height: 45px;
+        margin: 2px;
+        color:#ffffff;
+        font: 22px Futura, "Century Gothic", AppleGothic, sans-serif;
+        padding: 5px;
+        background-color:rgb(81, 119, 221);
+        border: 2px solid rgb(70, 70, 70, 0.7);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px rgb(92, 92, 92, 0.5);
+        cursor:pointer;
+      }
+  
+      .virtual-keyboard input[type="button"]:hover {
+        color: rgb(255, 195, 116);
+        background-color:rgb(138, 171, 214);
+        transform: scale(0.9, 0.9);
+        box-shadow: 10px 10px 10px rgb(92, 92, 92, 0.9);
+      }
+  
+      .virtual-keyboard input[type="button"]:disabled {
+        color: rgb(252, 0, 0);
+        background-color:rgb(105, 105, 105);
+        transform: scale(0.9, 0.9);
+        box-shadow: 10px 10px 10px rgb(92, 92, 92, 0.9);
+      }
+  
+      .fa {
+        padding: 0px;
+        font-size: 20px;
+        width: 25px;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 5px;
+        margin-left: 10px;
+      }
+  
+      .fa:hover {
+        opacity: 0.7;
+      }
+  
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+  
+      #rodape {
+        height: 30px;
+        margin-left: 0px;
+        padding-left: 530px;
+        padding-top: 0px;
+        font-family: "Futura", sans-serif;
+        font-size: 14px;
+        color: black;
+        background-color: #cccccc;
+        /*
+        border-width: 2px;
+        border-style: dashed;
+        border-color: rgb(35, 194, 3);
+        */
+      }
